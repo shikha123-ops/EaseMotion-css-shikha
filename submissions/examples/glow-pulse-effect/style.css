@@ -1,0 +1,58 @@
+:root {
+  --glow-color: #4f46e5;
+  --glow-intensity: 25px;
+  --pulse-duration: 2s;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #111827;
+  color: white;
+  text-align: center;
+  padding: 40px;
+}
+
+.demo-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.glow-pulse {
+  animation: glowPulse var(--pulse-duration) infinite ease-in-out;
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0px var(--glow-color);
+  }
+
+  50% {
+    transform: scale(1.15);
+    box-shadow: 0 0 var(--glow-intensity) var(--glow-color);
+  }
+}
+
+.cta-button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  background: #4f46e5;
+  color: white;
+  cursor: pointer;
+}
+
+.badge {
+  background: #ef4444;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+.icon {
+  font-size: 3rem;
+}
